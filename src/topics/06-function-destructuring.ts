@@ -1,5 +1,5 @@
 
-interface Product {
+export interface Product {
     description: string;
     price: number;
 }
@@ -38,7 +38,7 @@ interface TaxCalculationsOptions {
 
 
 // function taxCalculation({tax, products}: TaxCalculationsOptions ): 
-function taxCalculation(options: TaxCalculationsOptions ): 
+export function taxCalculation(options: TaxCalculationsOptions ): 
     [number, number] {
     let total = 0;
 
@@ -62,8 +62,8 @@ const result = taxCalculation({
     tax // si el nombre es identico, no se necesita asignar
 });
 
-console.log('Total: ', result[0]);
-console.log('Total: ', result[2]);
+// console.log('Total: ', result[0]);
+// console.log('Total: ', result[2]);
 
 const [TotalDes, TaxDes] = taxCalculation({
     products: shoppingCart, 
@@ -87,4 +87,4 @@ console.log('Total: ', TaxDes);
 
 
 
-export {};
+// export {};
